@@ -45,7 +45,7 @@ variable "private_subnets" {
 variable "profile" {
   type        = string
   description = "profile"
-  default     = ""
+  default     = "default"
 }
 
 #-- var.tf -------------------------------------------------------------------
