@@ -53,6 +53,6 @@ variable "profile" {
 variable "provider_env_roles" {
   type = map(string)
   default = {
-    "default"  = ""
+    "default" = ""
   }
 }
