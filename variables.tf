@@ -3,8 +3,9 @@ variable "tags" {
   type        = map(string)
   description = "tags add to all resources created with this module"
   default = {
-    Terraform = "true"
-    Module    = "ecs-fargate"
+    Variable1 = "Variable1Value"
+    Variable2 = "Variable2Value"
+    Variable3 = "Variable3Value"
   }
 }
 
@@ -18,7 +19,7 @@ variable "app_name" {
 variable "AWS_REGION" {
   type        = string
   description = "region where to create resources"
-  default     = "ap-southeast-2"
+  default     = "us-east-1"
 }
 
 variable "vpc_cidr" {
@@ -28,7 +29,7 @@ variable "vpc_cidr" {
 
 variable "azs" {
   description = "A list of availability zones names or ids in the region"
-  default     = ["ap-southeast-2a", "ap-southeast-2b", "ap-southeast-2c"]
+  default     = ["us-east-1a", "us-east-1b", "us-east-1c"]
 }
 
 variable "public_subnets" {
@@ -38,9 +39,14 @@ variable "public_subnets" {
 
 variable "private_subnets" {
   description = "A list of private subnets inside the VPC"
-  default     = ["subnet-0be642dbf321f8d1a", "subnet-0b047ea0ce0a2a359", "subnet-024a818f420dd330d"]
+  default     = ["172.32.200.0/27", "172.32.200.32/27", "172.32.200.64/27"]
 }
 
+variable "profile" {
+  type        = string
+  description = "profile"
+  default     = ""
+}
 
 #-- var.tf -------------------------------------------------------------------
 
