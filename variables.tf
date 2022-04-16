@@ -42,6 +42,18 @@ variable "private_subnets" {
   default     = ["172.32.200.0/27", "172.32.200.32/27", "172.32.200.64/27"]
 }
 
+variable "database_subnets" {
+  description = "A list of database subnets inside the VPC"
+  default     = ["172.32.200.192/27"]
+}
+
+variable "elasticcache_subnets" {
+  description = "A list of elasticcache subnets inside the VPC"
+  default     = ["172.32.200.224/27"]
+}
+
+
+
 variable "profile" {
   type        = string
   description = "profile"
