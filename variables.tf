@@ -34,22 +34,22 @@ variable "azs" {
 
 variable "public_subnets" {
   description = "A list of public subnets inside the VPC"
-  default     = ["172.32.200.96/27", "172.32.200.128/27", "172.32.200.160/27"]
+  default     = ["172.32.200.64/27", "172.32.200.96/27"]
 }
 
 variable "private_subnets" {
   description = "A list of private subnets inside the VPC"
-  default     = ["172.32.200.0/27", "172.32.200.32/27", "172.32.200.64/27"]
+  default     = ["172.32.200.0/27", "172.32.200.32/27"]
 }
 
 variable "database_subnets" {
   description = "A list of database subnets inside the VPC"
-  default     = ["172.32.200.192/27"]
+  default     = ["172.32.200.128/27", "172.32.200.160/27"]
 }
 
 variable "elasticcache_subnets" {
   description = "A list of elasticcache subnets inside the VPC"
-  default     = ["172.32.200.224/27"]
+  default     = ["172.32.200.224/27", "172.32.200.192/27"]
 }
 
 
