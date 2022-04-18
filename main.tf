@@ -17,7 +17,15 @@ module "vpc" {
 resource "aws_ssm_parameter" "private-subnet-0" {
   name        = "private-subnet-0"
   type        = "String"
-  description = "The password of onmostealth-aurora-${var.app_name}-instance-1 database"
+  description = "Private Subnet ID"
   value       = module.vpc.private_subnets[0]
+  tags        = var.tags
+}
+
+resource "aws_ssm_parameter" "security-group" {
+  name        = "security-group"
+  type        = "String"
+  description = "Default Security group ID"
+  value       = module.vpc.default_security_group_id
   tags        = var.tags
 }
